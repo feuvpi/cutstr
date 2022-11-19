@@ -9,8 +9,7 @@ var string = `{"data":[{"p":7296.89,"s":"BINANCE:BTCUSDT","t":1575526691134,"v":
 
 
 
-
-class CutStr {
+exports.CutStr = function() {
 
     // -- construtores
 
@@ -31,6 +30,20 @@ class CutStr {
     }
 
     // -- check if string has provided chars
+    const checkChar1 = contain(this.input, this.startCharacter);
+    const checkChar2 = contain(this.input, this.endCharacter);
+
+    if(checkChar1 == false || checkChar2 == false){
+        return (`ERRO. Check the string provided and boundary characters, ${this.startCharacter} or ${this.endCharacter} not found.`)
+    }
+    
+    
+    
+    
+    
+
+
+    
 
     // -- find index of lchar
         // -- iterate over strings
@@ -48,4 +61,17 @@ class CutStr {
 
 module.exports = cutstr(string) {
 
+}
+
+
+// -- methods
+
+const contain = (str, char) => {    
+    for (var i = 0; x < str.length; x++)
+    {
+        if(char == str.charAt(i)){
+            return true
+        }
+        return false;
+    }
 }
