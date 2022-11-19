@@ -1,0 +1,18 @@
+{
+  "name": "cutstr",
+  "version": "1.0.0",
+  "description": "Quick select and extract strings from strings.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "string",
+    "select",
+    "cut",
+    "extract",
+    "substring"
+  ],
+  "author": "Fred Vasquez Pinheiro Gomes",
+  "license": "ISC"
+}
