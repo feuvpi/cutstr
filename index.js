@@ -20,8 +20,8 @@ class cutStr {
         this.charRight = rchar;
         console.log(this.charRight)
         // -- boundary ocurrences 
-        this.charRightOccurrence = t1;
-        this.charLeftOccurrence = t2;
+        this.charRightOccurrence = t2;
+        this.charLeftOccurrence = t1;
         // -- contain check
         this.containLeft = this.contain(this.charLeft);
         console.log(this.containLeft)
@@ -30,15 +30,20 @@ class cutStr {
         // -- boundary index
         if(this.containLeft){
             this.indexLeft = this.findIndex(this.charLeft, this.charLeftOccurrence);
+            console.log(typeof(this.indexLeft))
+        } else {
+            return `The string provided do not contain the char ${this.charLeft}`
         }
         if(this.containRight){
-            this.indexRight = this.findIndex(this.charRight), this.charRightOccurrence;
+            this.indexRight = this.findIndex(this.charRight, this.charRightOccurrence);
+        } else {
+            return `The string provided do not contain the char ${this.charRight}`
         }
 
         // -- output
-        if((typeof(this.indexLeft) == Number) && (typeof(this.indexRight) == Number)){
-            this.outputString = this.input.Substring(this.indexLeft+1, this.indexRight);
-        }
+        if(!isNaN(this.indexLeft) && !isNaN(this.indexRight)){
+            this.outputString = this.inputString.substring((this.indexLeft+1), this.indexRight)
+        } 
     }
 
 
@@ -68,7 +73,7 @@ class cutStr {
                 occurrences++
             }
             if(count == occurrences){
-                return(Number)(index);
+                return (Number)(index);
             }
         }
         return(`There is only ${occurrences} occurrences of ${char} at the input provided.`)
@@ -120,15 +125,19 @@ exports.CutStr = function(string, lchar, rchar, t1, t2,) {
     // -- find index of lchar
     // indexLeft = findIndex(this.input, this.charLeft, this.charLeftOccurrence);
     // indexRight = findIndex(this.input, this.charRight, this.charRightOccurrence);
-    if(typeof(cutstr.indexLeft) != Number || typeof(cutstr.indexRight) != Number){
+    if(isNaN(cutstr.indexLeft) || isNaN(cutstr.indexRight)){
+        console.log(typeof(cutstr.indexLeft))
+        console.log(typeof(cutstr.indexRight))
         return(`There was a problem with the number of occurrences provided. Check the number of occurrences of each boundary identifier.`)
     }
+        
+    
 
     // // -- use substring or split to cut string and place it in output
     // cutstr.output = this.input.Substring(this.indexLeft+1, this.indexRight)
 
     // -- return output
-    return(this.output)
+    return(cutstr.outputString)
 
 }
 
@@ -167,4 +176,4 @@ const findIndex = (str, char, count) => {
 
 
 var test = this.CutStr(string, ":", ",", 2, 1)
-console.log(test)
+console.log("the result is: " + test)
