@@ -1,10 +1,10 @@
 {
   "name": "cutstr",
   "version": "1.0.0",
-  "description": "Quick select and extract strings from strings.",
+  "description": "Quick select and extract strings from strings selecting occurring chars and its repetition.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "string",
@@ -14,5 +14,8 @@
     "substring"
   ],
   "author": "Fred Vasquez Pinheiro Gomes",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }
