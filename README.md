@@ -44,7 +44,7 @@ string = "2016-12-21 00:00:00.000"
 
 const day = cutStr(string, "-", " ", 2, 1);
 
-console.log(day);
+console.log(day) //  21 
 ```
 
 ## Authors
@@ -53,4 +53,4 @@ console.log(day);
 
 ## License
 
-[MIT License](https://andreasonny.mit-license.org/2019) © Andrea SonnY
+[MIT License](https://github.com/feuvpi/cutstr/blob/main/LICENSE.MD) © Fred Vasquez
