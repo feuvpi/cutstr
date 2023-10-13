@@ -37,6 +37,8 @@ $ yarn add --dev custr
 
 ## Usage
 
+This package is can be used in situations where the index of the substring is not known, but the structure of the string is.
+
 ```js
 const cutStr = require('Cutstr')
 
@@ -49,7 +51,7 @@ console.log(day) //  21
 
 ## Authors
 
-* **Fred Vasquez Pinheiro** - *Initial work* - [FredVasquez](https://github.com/feuvpi)
+* **Feuvpi - *Initial work* - [FredVasquez](https://github.com/feuvpi)
 
 ## License
 

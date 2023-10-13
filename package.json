@@ -1,6 +1,6 @@
 {
   "name": "cutstr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Quick select and extract strings from strings selecting occurring chars and its repetition.",
   "main": "index.js",
   "scripts": {
